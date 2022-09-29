@@ -1,0 +1,43 @@
+<div class="login-bar-div">
+  <mat-toolbar>
+    <button mat-icon-button disabled="disabled">
+      <mat-icon>alarm</mat-icon>
+    </button>
+    <div style="text-align: center; flex: auto">
+      База приборов, отслеживание проверок
+    </div>
+    <auth-buttons></auth-buttons>
+  </mat-toolbar>
+</div>
+
+<mat-card class="matCard">
+  <mat-card-title style="text-align: center">Регистрация</mat-card-title>
+  <mat-card-subtitle></mat-card-subtitle>
+  <input
+    type="text"
+    [(ngModel)]="user.email"
+    placeholder="Введите email (это логин для входа)..."
+    style="width: 100%"
+  />
+  <input
+    type="text"
+    [(ngModel)]="user.password"
+    placeholder="Введите пароль..."
+    style="width: 100%; margin-top: 1em"
+  />
+    <input
+    type="text"
+    [(ngModel)]="user.password2"
+    placeholder="Введите пароль повторно..."
+    style="width: 100%; margin-top: 1em"
+  />
+  <input
+    type="text"
+    [(ngModel)]="user.username"
+    placeholder="Введите никнейм..."
+    style="width: 100%; margin-top: 1em"
+  />
+  <mat-card-actions class="matCardAction">
+    <button mat-button (click)="registration()">Зарегистрироваться</button>
+  </mat-card-actions>
+</mat-card>
